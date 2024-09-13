@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'Futura';
+    src: url('caligrafias/FuturaStd-Book.otf') format('truetype');/* Ajusta la ruta si es necesario */ 
+}
+
+body {
+    font-family: 'Futura';
+    font-weight: bold; /* Aplicar negrita a todo el texto */
+}
+
+header {
+    background-color: rgba(93, 56, 153, 0.9); /* Color de fondo con transparencia */
+    padding: 10px 0;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0; /* Asegura que el encabezado esté en la parte superior */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Ajusta la altura de la imagen según tus necesidades */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px; /* Opcionalmente aumenta el tamaño de fuente */
+    font-family: 'Futura';
+}
+
+nav ul li .dropdown {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(75, 35, 139, 0.9); /* Color de fondo con transparencia */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+}
+
+nav ul li .dropdown li {
+    margin: 0;
+}
+
+nav ul li .dropdown li a {
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+}
+
+nav ul li:hover .dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center;     /* Centra horizontalmente */
+    height: 100vh;           /* Asegura que la sección ocupe toda la altura de la vista */
+    padding-left: 50px;     /* Ajusta el espacio desde el lado izquierdo si es necesario */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho del contenedor */
+    background: url('Imagenes/CostaRica2.png'); /* Fondo opcional */
+    background-size: cover;  /* Asegura que el fondo cubra todo el contenedor */
+    text-align: center;       /* Centra el texto del h2 */
+    color: #000000;              /* Asegura que el texto sea visible sobre el fondo */
+    margin-top: 70px; /* Añade espacio superior para separar del header fijo */
+}
+.hero h1 {
+    color: white;
+    font-family: 'Futura'; /* Aplica la tipografía Love */
+    font-size: 4rem; /* Ajusta el tamaño de la fuente según tus necesidades */
+    margin: 0; /* Elimina márgenes predeterminados */
+    align-self: flex-start; /* Alinea el h1 a la izquierda dentro del contenedor */
+    text-align: left; /* Alinea el texto a la izquierda */
+    width: 100%; /* Asegura que el h1 ocupe el ancho completo del contenedor para la alineación */
+    text-align: center;
+}
+
+.hero h2 {
+    padding: 20px; /* Espaciado interno para el texto */
+    border-radius: 8px; /* Bordes redondeados para un aspecto más suave */
+    max-width: 80%; /* Ajusta el ancho máximo para que el cuadro no sea demasiado grande */
+    margin: 20px auto; /* Centra el cuadro y añade espacio vertical */
+    text-align: center; /* Centra el texto dentro del cuadro */
+    color: #ffffff; /* Color del texto para mejor legibilidad */
+    font-size: 1.2rem; /* Tamaño de la fuente ajustado */
+    line-height: 1.6; /* Espaciado entre líneas para facilitar la lectura */
+    font-family: 'Futura';
+}
+
+.hero h3{
+    padding: 20px; /* Espaciado interno para el texto */
+    border-radius: 8px; /* Bordes redondeados para un aspecto más suave */
+    max-width: 80%; /* Ajusta el ancho máximo para que el cuadro no sea demasiado grande */
+    margin: 20px auto; /* Centra el cuadro y añade espacio vertical */
+    text-align: center; /* Centra el texto dentro del cuadro */
+    color: #ffffff; /* Color del texto para mejor legibilidad */
+    font-size: 1.2rem; /* Tamaño de la fuente ajustado */
+    line-height: 1.6; /* Espaciado entre líneas para facilitar la lectura */
+    font-family: 'Futura';
+}
+
+.content-section button {
+    background-color: rgba(93, 56, 153, 0.9); /* Color de fondo con transparencia */
+    color: #fff; /* Color del texto */
+    border: none; /* Elimina el borde predeterminado */
+    padding: 12px 24px; /* Espaciado interno del botón, ajustado para mejor apariencia */
+    font-size: 1.1rem; /* Tamaño de la fuente mejorado */
+    font-family: 'Futura'; /* Aplica la tipografía Love */
+    border-radius: 8px; /* Bordes redondeados para un aspecto más moderno */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves para efectos */
+    margin: 20px; /* Espacio entre botones */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras para mejor legibilidad */
+}
+
+.content-section button:hover {
+    background-color: rgba(93, 56, 153, 1); /* Color de fondo al pasar el cursor */
+    transform: scale(1.05); /* Escala ligeramente el botón para el efecto de hover */
+}
+
+.content-section button:active {
+    background-color: rgba(93, 56, 153, 0.8); /* Color de fondo al hacer clic */
+    transform: scale(0.95); /* Reduce el tamaño del botón al hacer clic */
+}
+
+#content {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    flex-direction: column;  /* Alinea los elementos en una columna */
+    margin-top: 40px;        /* Espacio superior para separar el contenido del resto */
+    padding: 40px;           /* Aumenta el espaciado interno alrededor del texto */
+    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo blanco con transparencia */
+    border-radius: 8px;     /* Bordes redondeados para un aspecto más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
+    max-width: 900px;       /* Ancho máximo ajustado para más espacio */
+    text-align: justify;    /* Justifica el texto para una apariencia más ordenada */
+    color: #333;            /* Color del texto para mejor legibilidad */
+    font-size: 1.2rem;      /* Tamaño de la fuente ajustado */
+    line-height: 1.8;       /* Espaciado entre líneas para facilitar la lectura */
+    margin: 20px auto;      /* Centra el contenedor horizontalmente y añade espacio vertical */
+    font-family: 'Futura';
+}
+
+#content p {
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 15px 0; /* Espacio superior e inferior dentro del párrafo */
+    text-align: center; /* Centra el texto dentro del párrafo */
+}
+
+#content p:nth-child(odd) {
+    font-weight: bold; /* Aplica negrita a los párrafos impares, si deseas diferenciar */
+}
+
+

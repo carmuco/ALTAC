@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('caligrafias/FuturaStd-Book.otf') format('truetype');/* Ajusta la ruta si es necesario */ 
+}
+
+body {
+    font-family: 'Futura';
+    font-weight: bold; /* Aplicar negrita a todo el texto */
+}
+
+header {
+    background-color: rgba(93, 56, 153, 0.9); /* Color de fondo con transparencia */
+    padding: 10px 0;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Ajusta la altura de la imagen según tus necesidades */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px; /* Opcionalmente aumenta el tamaño de fuente */
+    font-family: 'Futura';
+}
+
+nav ul li .dropdown {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(75, 35, 139, 0.9); /* Color de fondo con transparencia */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+}
+
+nav ul li .dropdown li {
+    margin: 0;
+}
+
+nav ul li .dropdown li a {
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+}
+
+nav ul li:hover .dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.hero {
+    position: relative;
+    height: 100vh; /* Altura completa */
+    width: 100vw;  /* Ancho completo */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-family: 'Futura';
+    font-size: 58px;
+    margin-bottom: 10px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.hero h3 {
+    font-size: 68px;
+    margin-bottom: 10px;
+    animation: fadeInUp 2s ease-in-out;
+    font-family: 'Futura';
+}
+
+.hero p {
+    font-size: 44px;
+    animation: fadeInUp 2.5s ease-in-out;
+    font-family: 'Futura';
+}
+
+#did-agent-container {
+    position: fixed;
+    bottom: 20px; /* Ajusta la posición a la parte inferior de la pantalla */
+    right: 20px;  /* Separado de la esquina derecha */
+    width: 300px; /* Ajusta el tamaño del contenedor */
+    height: 400px; /* Ajusta la altura para que el agente se vea completo */
+    z-index: 1001; /* Asegúrate de que el agente esté por encima de otros elementos */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente, si es necesario */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    overflow: hidden;
+}
+
+#did-agent-container canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la visualización del agente */
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

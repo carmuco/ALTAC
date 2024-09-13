@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'Futura';
+    src: url('caligrafias/FuturaStd-Book.otf') format('truetype');/* Ajusta la ruta si es necesario */ 
+}
+
+body {
+    font-family: 'Futura';
+    font-weight: bold; /* Aplicar negrita a todo el texto */
+}
+
+header {
+    background-color: rgba(93, 56, 153, 0.9); /* Color de fondo con transparencia */
+    padding: 10px 0;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Ajusta la altura de la imagen según tus necesidades */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px; /* Opcionalmente aumenta el tamaño de fuente */
+    font-family: 'Futura';
+}
+
+nav ul li .dropdown {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(75, 35, 139, 0.9); /* Color de fondo con transparencia */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+}
+
+nav ul li .dropdown li {
+    margin: 0;
+}
+
+nav ul li .dropdown li a {
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+}
+
+nav ul li:hover .dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.content-section {
+    margin: 30px;
+    text-align: center; /* Centra los botones horizontalmente */
+}
+
+.content-section button {
+    margin: 10px;
+    padding: 50px 90px;
+    font-size:40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 40px;
+    background-color: #4B0082; /* Cambia este color al que prefieras */
+    color: white;
+    font-family:'Futura';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.content-section button:hover {
+    background-color: #5e5e5e; /* Un color más oscuro para el efecto hover */
+}
+
+.content-section #content {
+    margin-top: 50px;
+    font-size: 20px;
+    color: black; /* Cambia este color al que prefieras */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    opacity: 0; /* Inicia con transparencia */
+    animation: fadeIn 1s forwards; /* Aplica la animación de desvanecimiento */
+}
+.content-section #content p {
+    max-width: 600px; /* Limita el ancho del párrafo para una mejor legibilidad */
+    background-color: rgba(92, 92, 92, 0.7); /* Fondo morado transparente */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espacio alrededor del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    opacity: 0; /* Inicialmente invisible */
+    animation: fadeIn 1s forwards; /* Aplica la animación de desvanecimiento */
+}
+
+.hero {
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Altura completa */
+    width: 100vw;  /* Ancho completo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+
+.hero {
+    background-image: url('Imagenes/AltacFondo.png'); /* Puedes añadir una imagen de fondo si lo deseas */
+    background-size: cover;
+    background-position: center;
+    height: 100; /* Altura completa */
+    width: 100;  /* Ancho completo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 24px;
+    font-family: 'Futura';
+    animation: fadeInUp 2.5s ease-in-out;
+    background-color: #5D3899; /* Fondo morado transparente */
+    padding: 20px; /* Espacio alrededor del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    color: white; /* Color del texto */
+    margin: 10px 0; /* Espacio alrededor del párrafo */
+    max-width: 80%; /* Limita el ancho del párrafo */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.hero h2 {
+    font-family:'Futura';
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000; /* Borde morado */
+    animation: fadeInUp 2s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+

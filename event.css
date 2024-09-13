@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('caligrafias/FuturaStd-Book.otf') format('truetype'); /* Adjust the path if necessary */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('Imagenes/event.png') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+}
+
+header {
+    background-color: rgba(93, 56, 153, 0.9); /* Color de fondo con transparencia */
+    padding: 10px 0;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px; /* Máximo ancho para pantallas grandes */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.logo img {
+    height: 50px; /* Ajusta la altura de la imagen según tus necesidades */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px; /* Opcionalmente aumenta el tamaño de fuente */
+    font-family: 'Futura';
+}
+
+nav ul li .dropdown {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(75, 35, 139, 0.9); /* Color de fondo con transparencia */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+}
+
+nav ul li .dropdown li {
+    margin: 0;
+}
+
+nav ul li .dropdown li a {
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+}
+
+nav ul li:hover .dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* Alinea los botones en columna */
+    align-items: center;
+    gap: 15px; /* Espacio entre los botones */
+}
+
+.button-container button {
+    background-color: #5d3899; /* Color púrpura */
+    border: none;
+    color: white;
+    padding: 25px 40px; /* Tamaño del padding para hacer los botones más grandes */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px; /* Tamaño de la fuente */
+    cursor: pointer;
+    border-radius: 30px; /* Bordes redondeados */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra para más profundidad */
+    transition: all 0.3s ease; /* Transición suave para efectos de hover */
+}
+
+.button-container button:hover {
+    background-color: #4a2c7f; /* Color de fondo más oscuro en hover */
+    transform: translateY(-5px); /* Efecto de elevación en hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada en hover */
+}
+
+.button-container button:active {
+    transform: translateY(2px); /* Efecto de presionar el botón */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra menos pronunciada al presionar */
+}
+
+.hidden {
+    display: none; /* Inicialmente oculto */
+    background-color: #f9f9f9; /* Color de fondo claro y atractivo */
+    color: #333; /* Color del texto para buen contraste */
+    border: 2px solid #5d3899; /* Borde del color de los botones */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra para mayor profundidad */
+    max-width: 400px; /* Ancho máximo para evitar desbordamiento */
+    text-align: left; /* Alineación del texto a la izquierda */
+    transition: max-height 0.5s ease, padding 0.5s ease, opacity 0.5s ease; /* Transiciones suaves para animaciones */
+    overflow: hidden; /* Oculta el contenido que desborda el contenedor */
+    opacity: 0; /* Inicialmente oculto */
+    max-height: 0; /* Inicialmente colapsado */
+}
+
+.hidden.show {
+    display: block; /* Mostrar el texto cuando se activa */
+    opacity: 1; /* Mostrar el texto cuando se activa */
+    max-height: 200px; /* Altura máxima para mostrar el contenido */
+    padding: 20px; /* Asegura que el padding se muestre cuando se activa */
+    animation: slideDown 0.5s ease; /* Animación de deslizamiento hacia abajo */
+    overflow-y: auto; /* Permite la barra de desplazamiento vertical */
+}
+
+/* Personalización de la barra de desplazamiento */
+.hidden.show::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+.hidden.show::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo de la pista de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados de la pista */
+}
+
+.hidden.show::-webkit-scrollbar-thumb {
+    background-color: #5d3899; /* Color de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados de la barra */
+    border: 2px solid #f1f1f1; /* Espacio entre la barra y la pista */
+}
+
+.hidden.show::-webkit-scrollbar-thumb:hover {
+    background-color: #4a2c7f; /* Color de la barra de desplazamiento en hover */
+}
+
+.hidden .itinerary {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding de la lista */
+    margin: 0; /* Elimina el margen de la lista */
+}
+
+.hidden .itinerary li {
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+.hidden .itinerary li strong {
+    color: #5d3899; /* Color para los elementos importantes */
+}
+
+.hidden .section-header {
+    font-size: 20px; /* Tamaño de fuente para el encabezado */
+    font-weight: bold;
+    color: #5d3899; /* Color del encabezado */
+    margin-bottom: 10px; /* Espacio debajo del encabezado */
+    border-bottom: 2px solid #5d3899; /* Línea debajo del encabezado */
+    padding-bottom: 5px; /* Espacio debajo del encabezado */
+}
+
+/* Animación de deslizamiento hacia abajo */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    nav ul {
+        flex-direction: column; /* Menú en columna */
+        text-align: center; /* Centra el texto del menú */
+    }
+
+    .button-container {
+        width: 90%; /* Ajusta el ancho del contenedor de botones */
+        padding: 20px; /* Añade algo de padding */
+    }
+
+    .button-container button {
+        width: 100%; /* Botones ocupan todo el ancho disponible */
+        font-size: 16px; /* Ajusta el tamaño de la fuente */
+    }
+    
+    .hidden {
+        max-width: 100%; /* Ajusta al 100% del contenedor en pantallas pequeñas */
+    }
+}
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    nav ul {
+        font-size: 14px; /* Reduce el tamaño de fuente del menú */
+    }
+
+    .button-container button {
+        font-size: 14px; /* Reduce el tamaño de fuente de los botones */
+        padding: 15px 20px; /* Ajusta el padding para que los botones sean más pequeños */
+    }
+    
+    .hidden.show {
+        max-height: 150px; /* Ajusta la altura para pantallas pequeñas */
+    }
+}

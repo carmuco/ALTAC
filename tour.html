@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALTAC International Summit 2024</title>
+    <link rel="stylesheet" href="tour.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Imagenes/altac.png" alt="ALTAC International">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">About</a>
+                        <ul class="dropdown">
+                            <li><a href="ALTAC.html">ALTAC Inc</a></li>
+                            <li><a href="CostaRica.html">Costa Rica</a></li>
+                            <li><a href="SUMMIT.html">Summit</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Schedule</a>
+                        <ul class="dropdown">
+                            <li><a href="tour.html">Tour</a></li>
+                            <li><a href="event.html">Event</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Agreegments</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+    </section>
+    <div class="button-wrapper">
+        <div class="button-container">
+            <button onclick="showText('text1')">19 de Setiembre</button>
+            <div id="text1" class="hidden">
+                <ul class="itinerary">
+                    <li><strong>Salida del Hotel: Salida al Tour, Entrada Principal</strong> 5:00 h - 5:30 h</li>
+                    <li><strong>Hotel Baldi: San Carlos, Costa Rica</strong> 9:30 h - 16:00 h</li>
+                    <li><strong>Check In, Hotel Punta Leona: Puntarenas, Costa Rica</strong> 20:00 h</li>
+                </ul>
+            </div>
+            
+            <button onclick="showText('text2')">20 de Setiembre</button>
+            <div id="text2" class="hidden">
+                <ul class="itinerary">
+                    <li><strong>Dia Libre: Hotel Punta Leona</strong> Libre</li>
+                    <li><strong>White Party ALTAC: Playa Blanca</strong> 18:00 h - 22:00 h</li>
+                </ul>
+            </div>
+            
+            <button onclick="showText('text3')">21 de Setiembre</button>
+            <div id="text3" class="hidden">
+                <ul class="itinerary">
+                    <li><strong>Check Out-Hotel Punta Leona, Salida a Isla Tortuga</strong> 8:30 h - 9:00 h</li>
+                    <li><strong>Registro Catamaran, Salida a Isla Tortuga</strong> 10:00 h - 10:40 h</li>
+                    <li><strong>Estancia en Isla Tortuga</strong> 11:20 h - 17:00 h</li>
+                    <li><strong>Regreso de Isla Tortuga</strong> 17:00 h</li>
+                    <li><strong>Llegada a Muelle, Check In - Hotel Marriot, Alajuela</strong> 18:00 h - 20:00 h</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showText(id) {
+            // Ocultar todos los textos
+            document.querySelectorAll('.hidden').forEach(div => {
+                div.classList.remove('show');
+            });
+
+            // Mostrar el texto seleccionado
+            document.getElementById(id).classList.add('show');
+        }
+    </script>
+</body>
+</html>
+

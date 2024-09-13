@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'Futura';
+    src: url('caligrafias/FuturaStd-Book.otf') format('truetype');/* Ajusta la ruta si es necesario */ 
+}
+
+body {
+    font-family: 'Futura';
+    font-weight: bold; /* Aplicar negrita a todo el texto */
+    background-image: url('Imagenes/contact.png'); /* Ajusta la ruta al lugar donde guardaste tu imagen */
+    background-size: cover; /* Cubre todo el fondo sin repetirse */
+    background-position: center; /* Centra la imagen en la página */
+    background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
+}
+
+header {
+    background-color: rgba(93, 56, 153, 0.9); /* Color de fondo con transparencia */
+    padding: 10px 0;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Ajusta la altura de la imagen según tus necesidades */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px; /* Opcionalmente aumenta el tamaño de fuente */
+    font-family: 'Futura';
+}
+
+nav ul li .dropdown {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(75, 35, 139, 0.9); /* Color de fondo con transparencia */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+}
+
+nav ul li .dropdown li {
+    margin: 0;
+}
+
+nav ul li .dropdown li a {
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+}
+
+nav ul li:hover .dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.hero {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 40px; /* Espacio entre los bloques */
+    height: 100vh; /* Altura completa de la ventana */
+    text-align: center; /* Centrar el texto */
+    padding: 20px; /* Agrega un margen interno para evitar que los bloques toquen el borde de la pantalla */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+.contact-item {
+    width: calc(25% - 40px); /* Ajusta el tamaño de cada bloque considerando el espacio entre ellos */
+    max-width: 300px; /* Opcional: establece un ancho máximo para mejorar la visualización en pantallas pequeñas */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    padding: 20px;
+    border-radius: 8px; /* Esquinas redondeadas */
+    border: 1px solid rgba(93, 56, 153, 0.4); /* Añade un borde */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos dentro del bloque */
+    background-color: white;
+}
+
+.contact-item h2 {
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: rgba(93, 56, 153, 0.9); /* Purple background with transparency */
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%; /* Adjust the width as necessary */
+}
+
+.footer-container img {
+    height: 150px; /* Adjust the image height as needed */
+}
+
+.footer-content p {
+    margin: 5px 20px; /* Spacing between paragraphs */
+    font-size: 18px; /* Font size for readability */
+}
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALTAC International Summit 2024</title>
+    <link rel="stylesheet" href="event.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Imagenes/altac.png" alt="ALTAC International">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">About</a>
+                        <ul class="dropdown">
+                            <li><a href="ALTAC.html">ALTAC Inc</a></li>
+                            <li><a href="CostaRica.html">Costa Rica</a></li>
+                            <li><a href="SUMMIT.html">Summit</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Schedule</a>
+                        <ul class="dropdown">
+                            <li><a href="tour.html">Tour</a></li>
+                            <li><a href="event.html">Event</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Agreegments</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+    </section>
+    <div class="button-wrapper">
+        <div class="button-container">
+            <!-- Botón para el 16 de Septiembre -->
+            <button onclick="showText('text1')">16 de Septiembre</button>
+            <div id="text1" class="hidden">
+                <ul class="itinerary">
+                    <li><strong>16:30 – 16:40:</strong> Bienvenida - Juan Cano y Arturo Baltodano: Bienvenida e inicio del SUMMIT 2024</li>
+                    <li><strong>16:40 – 16:55:</strong> Conferencia - Errol Solis: Semblanza de la situación actual de Costa Rica</li>
+                    <li><strong>16:55 – 17:10:</strong> Conferencia - Willy Alfaro: La Sostenibilidad como Aliado Empresarial</li>
+                    <li><strong>17:10 – 17:25:</strong> Conferencia - Jorge Bacchi: Uso de IA para potenciar Servicios Financieros</li>
+                    <li><strong>17:25 – 17:40:</strong> Coferencia - Andrés Zamora “Padre Mix”: El Valor Humano en Tiempos de Tecnologpia</li>
+                    <li><strong>17:40 – 17:45:</strong> Cierre de Sesiones - Arturo Baltodano: Mensaje Final</li>
+                </ul>
+            </div>
+
+            <!-- Botón para el 17 de Septiembre -->
+            <button onclick="showText('text2')">17 de Septiembre</button>
+            <div id="text2" class="hidden">
+                <ul class="itinerary">
+                    <li><strong>9:00 – 9:10:</strong> Bienvenida - Arturo Baltodano: Mensaje de Bienvenida</li>
+                    <li><strong>9:10 – 9:25:</strong> Taller - Jorge Oceguera: Alistando el Ánimo</li>
+                    <li><strong>9:25 – 10:00:</strong> Conferencia - Willy Alfaro y Mynor Sanchez: Práctica Profesional Responsable de la Sostenibilidad</li>
+                    <li><strong>10:00 – 10:45:</strong> Conferencia - Jose Fco Asturias y José Velazquez: Big Data y Ánalisis Predictivo: Transformando la Auditoria y la Contabilida</li>
+                    <li><strong>11:00 – 12:00:</strong> Conferencia - Fabricio Baltodano y Andres Guerron: Automatización y Control: El Futuro de la Auditoría Financiera</li>
+                    <li><strong>12:00 – 13:00:</strong> Conferencia - Jorge Bacchi: Casos de Éxito: Implementación de IA en la Auditoria y Contabilidad</li>
+                    <li><strong>14:00 – 14:40:</strong> Informe - Brenda Cano: Logros de Marketing y Desarrollo de Marca Personal</li>
+                    <li><strong>14:40 – 15:10:</strong> Taller - Carolina: Compromiso y Cambio: Un Enfoque Novedoso</li>
+                    <li><strong>15:10 – 16:00:</strong> Informe - Arturo Baltodano, Andres Guerron y Geisel: Manuales e Informe de Auditoría y Control de Calidad</li>
+                </ul>
+            </div>
+
+            <!-- Botón para el 18 de Septiembre -->
+            <button onclick="showText('text3')">18 de Septiembre</button>
+            <div id="text3" class="hidden">
+                <ul class="itinerary">
+                    <li><strong>9:00 – 9:10:</strong> Bienvenida - Arturo Baltodano: Mensaje de Bienvenida</li>
+                    <li><strong>9:10 – 9:30:</strong> Taller - Jorge Oceguera: Actividad Energizante</li>
+                    <li><strong>9:30 – 10:30:</strong> Taller - Ricardo Dominguez, José Velazquez y Juan Cano: CRM: Ánalisis Funcional</li>
+                    <li><strong>10:45 – 12:00:</strong> Taller - Jimmy Cordero, Willy Alfaro: Herramienta e Informe de cumplimiento en Normas de Sostenibilidad</li>
+                    <li><strong>12:00 – 12:20:</strong> Conferencia - Fabian Baltodano: Impacto de la IA y Sostenibilidad en los Mercados Bursatiles</li>
+                    <li><strong>12:20 – 12:45:</strong> Informe - Patricio Montoya y Juan Ferreira: Comité de Expansión</li>
+                    <li><strong>13:45 – 14:05:</strong> Informe - Ivan Maldona y Jorge Oceguera: Comité de Educación</li>
+                    <li><strong>14:05 – 14:35:</strong> Informe - José Velázquez: Tecnología</li>
+                    <li><strong>14:35 – 15:00:</strong> Taller - Arturo Baltodano y equipo de ALTAC Costa Rica: Plan de Cuentas NIIF</li>
+                </ul>
+            </div>
+
+            <!-- Botón para el horario -->
+            <button onclick="showText('text4')">Horario Evento</button>
+            <div id="text4" class="hidden">
+                <ul class="itinerary">
+                    <li><strong>16 de Septiembre, Registro:</strong> Piso 17 del Hotel Hilton 12:00 h - 15:00 h</li>
+                    <li><strong>16 de Septiembre, Coctel de Bienvenida:</strong> Piso 17, Salon StarLine, Hotel Hilton 16:00 h - 20:00 h</li>
+                    <li><strong>17 de Septiembre, Sesiones de Trabajo:</strong> Piso 17, Salon StarLine 1, Hotel Hilton 9:00 h - 16:00 h</li>
+                    <li><strong>17 de Septiembre, Salida del Hotel:</strong> Entrada Principal, Hotel Hilton 17:30 h</li>
+                    <li><strong>17 de Septiembre, Cena y Cata de Vinos:</strong> Restaurante Novillo Alegre 18:00 h - 21:00 h</li>
+                    <li><strong>18 de Septiembre, Sesiones de Trabajo:</strong> Piso 17, Salon StarLine 1, Hotel Hilton 9:00 h - 15:00 h</li>
+                    <li><strong>18 de Septiembre, Junta de Miembros:</strong> Piso 17, Salon StarLine 1, Hotel Hilton 15:00 h - 16:00 h</li>
+                    <li><strong>18 de Septiembre, Cena de Clausura:</strong> Piso 17, Salon StarLine, Hotel Hilton 18:00 h - 22:00 h</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showText(id) {
+            // Ocultar todos los textos
+            document.querySelectorAll('.hidden').forEach(div => {
+                div.classList.remove('show');
+            });
+
+            // Mostrar el texto seleccionado
+            document.getElementById(id).classList.add('show');
+        }
+    </script>
+</body>
+</html>
+

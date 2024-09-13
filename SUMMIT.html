@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALTAC International Summit 2024</title>
+    <link rel="stylesheet" href="SUMMIT.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script>
+        function showContent(type) {
+            let content = document.getElementById('content');
+            if (type === 'Aplicacion') {
+                content.innerHTML = "<p>El evento se centrará en cómo la IA puede revolucionar los servicios financieros, contables y legales. Se abordarán temas como la automatización de procesos, el análisis de datos avanzado, la mejora de la toma de decisiones y la creación de soluciones más eficientes y personalizadas para los clientes. Los asistentes tendrán la oportunidad de conocer las últimas tendencias en IA, participar en talleres prácticos y escuchar a expertos internacionales que lideran la innovación en estos campos.</p>";
+            } else if (type === 'Impulso') {
+                content.innerHTML = "<p>Además de la IA, el SUMMIT 2024 también destacará la importancia de integrar prácticas sostenibles en el entorno empresarial. Se discutirán estrategias para cumplir con las normativas de sostenibilidad, reducir el impacto ambiental y fomentar una cultura empresarial responsable. La sostenibilidad no solo se verá como un cumplimiento normativo, sino como una oportunidad para crear valor a largo plazo y mejorar la reputación corporativa.</p>";
+            }
+            // Reinicia la animación
+            let paragraph = content.querySelector('p');
+            if (paragraph) {
+                paragraph.style.animation = 'none'; /* Detiene cualquier animación anterior */
+                void paragraph.offsetWidth; /* Fuerza el reflujo para reiniciar la animación */
+                paragraph.style.animation = 'fadeIn 1s forwards'; /* Aplica la animación nuevamente */
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Imagenes/altac.png" alt="ALTAC International">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">About</a>
+                        <ul class="dropdown">
+                            <li><a href="ALTAC.html">ALTAC Inc</a></li>
+                            <li><a href="CostaRica.html">Costa Rica</a></li>
+                            <li><a href="SUMMIT.html">Summit</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Schedule</a>
+                        <ul class="dropdown">
+                            <li><a href="tour.html">Tour</a></li>
+                            <li><a href="event.html">Event</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Agreegments</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <H1>SUMMIT 2024</H1>
+        <h2>El "SUMMIT 2024" es un evento internacional de gran envergadura que se celebrará en Costa Rica, con un enfoque central en la integración de la Inteligencia Artificial (IA) y la Sostenibilidad como motores de transformación en los sectores financieros, contables y legales. Este evento tiene como objetivo principal explorar cómo estas innovaciones tecnológicas pueden ser utilizadas para agilizar, optimizar y fortalecer los servicios profesionales, al mismo tiempo que se promueven prácticas empresariales responsables y sostenibles.</h2>
+        <section class="content-section">
+            <button onclick="showContent('Aplicacion')">Aplicación de la Inteligencia Artificial</button>
+            <button onclick="showContent('Impulso')">Impulso a la Sostenibilidad Empresarial</button>
+            <div id="content"></div>
+        </section>
+    </section>
+</body>
+</html>

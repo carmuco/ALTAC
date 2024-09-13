@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALTAC International</title>
+    <link rel="stylesheet" href="ALTAC.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script>
+        function showContent(type) {
+            let content = document.getElementById('content');
+            if (type === 'MISSION') {
+                content.innerHTML = "<p>To provide solutions and strategic knowledge to local, multi-national and global firms through delivering services including auditing, tax, accounting, legal and business consulting. To offer innovative improvement and development processes that keep us at the leading edge.</p>";
+            } else if (type === 'VISION') {
+                content.innerHTML = "<p>We strive to be your most trusted asset. Our continuous imprvement philosophy allows us to timely respond to your local and multijurisdictional needs. With a responsive multidisciplinary organizational structure and personalized complehensive services, ALTAC International leverages its global reach to add value in every interaction</p>";
+            }
+            // Reinicia la animación
+            let paragraph = content.querySelector('p');
+            if (paragraph) {
+                paragraph.style.animation = 'none'; /* Detiene cualquier animación anterior */
+                void paragraph.offsetWidth; /* Fuerza el reflujo para reiniciar la animación */
+                paragraph.style.animation = 'fadeIn 1s forwards'; /* Aplica la animación nuevamente */
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Imagenes/altac.png" alt="ALTAC International">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">About</a>
+                        <ul class="dropdown">
+                            <li><a href="ALTAC.html">ALTAC Inc</a></li>
+                            <li><a href="CostaRica.html">Costa Rica</a></li>
+                            <li><a href="SUMMIT.html">Summit</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Schedule</a>
+                        <ul class="dropdown">
+                            <li><a href="tour.html">Tour</a></li>
+                            <li><a href="event.html">Event</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Agreegments</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <h2>We are a multi-national business network throughout the Americas</h2>
+        <p>Our services cover all the areas and needs of your business including Auditing, Taxes, Accounting, Legal Services and Consulting. As a client, you benefit from our deep multi-sector knowledge and high-performance team to fulfill regulatory requirements, keep investors informed and meet stakeholders needs.</p>
+        <section class="content-section">
+            <button onclick="showContent('MISSION')">MISSION</button>
+            <button onclick="showContent('VISION')">VISION</button>
+            <div id="content"></div>
+        </section>
+    </section>
+</body>
+</html>

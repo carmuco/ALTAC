@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALTAC International Summit 2024</title>
+    <link rel="stylesheet" href="CostaRica2.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script>
+        function showContent(type) {
+            let content = document.getElementById('content');
+            if (type === 'Maravillas') {
+                content.innerHTML = "<p>El paisaje costarricense es una vibrante paleta de colores, desde las aguas cristalinas del Caribe hasta las majestuosas olas del Pacífico. Aquí, puedes explorar exuberantes selvas tropicales, volcanes activos y parques nacionales que albergan una rica diversidad de flora y fauna. Los amantes de la naturaleza se maravillarán con la posibilidad de avistar perezosos, monos, tucanes y la famosa rana arbórea de ojos rojos.</p>";
+            } else if (type === 'Infraestructura') {
+                content.innerHTML = "<p>Costa Rica cuenta con una infraestructura moderna y bien desarrollada, lo que facilita la organización de eventos internacionales. Sus aeropuertos internacionales, como el Aeropuerto Internacional Juan Santamaría en San José y el Aeropuerto Internacional Daniel Oduber en Liberia, ofrecen conexiones directas a múltiples destinos alrededor del mundo. Además, el país cuenta con una amplia gama de hoteles, centros de convenciones y servicios profesionales de alta calidad.</p>";
+            } else if (type === 'Sostenibilidad') {
+                content.innerHTML = "<p>Costa Rica es líder mundial en sostenibilidad y ecoturismo. Con más del 25% de su territorio protegido, este país se toma muy en serio la conservación del medio ambiente. Además, se ha propuesto ser un país carbono neutral para 2050. Esto hace de Costa Rica no solo un destino hermoso, sino también responsable y consciente, ideal para organizaciones y eventos que valoran la sostenibilidad.</p>";
+            } else if (type === 'Actividades') {
+                content.innerHTML = "<p>Las actividades en Costa Rica son tan diversas como su paisaje. Los aventureros pueden disfrutar de emocionantes actividades al aire libre como el canopy, el surf, el rafting y el buceo. Para aquellos que buscan relajarse, las playas de arena blanca, los resorts de lujo y los spas naturales ofrecen el escape perfecto. Además, las visitas culturales a museos, pueblos históricos y mercados locales proporcionan una experiencia enriquecedora y auténtica.</p>";
+            } else if (type === 'Cultura') {
+                content.innerHTML = "<p>La cultura costarricense, o tica, está impregnada de tradiciones ricas y variadas. Desde las coloridas celebraciones del Día de la Independencia hasta el vibrante Carnaval de Limón, la cultura local es una mezcla festiva de influencias indígenas, africanas y españolas. La gastronomía costarricense es otro deleite, con platos como el gallo pinto, el casado y las deliciosas frutas tropicales que ofrecen un festín para los sentidos.</p>";
+            } else if (type === 'Seguridad') {
+                content.innerHTML = "<p>Costa Rica es conocida por ser uno de los países más seguros de América Latina. La amabilidad y la hospitalidad de los costarricenses, conocidos como Ticos, hacen que los visitantes se sientan como en casa desde el primer momento. La frase Pura Vida, que significa vida pura o vida plena, encapsula perfectamente el espíritu de la nación y su gente.</p>";
+            }
+            // Reinicia la animación
+            let paragraph = content.querySelector('p');
+            if (paragraph) {
+                paragraph.style.animation = 'none'; /* Detiene cualquier animación anterior */
+                void paragraph.offsetWidth; /* Fuerza el reflujo para reiniciar la animación */
+                paragraph.style.animation = 'fadeIn 1s forwards'; /* Aplica la animación nuevamente */
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Imagenes/altac.png" alt="ALTAC International">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">About</a>
+                        <ul class="dropdown">
+                            <li><a href="ALTAC.html">ALTAC Inc</a></li>
+                            <li><a href="CostaRica.html">Costa Rica</a></li>
+                            <li><a href="SUMMIT.html">Summit</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Schedule</a>
+                        <ul class="dropdown">
+                            <li><a href="tour.html">Tour</a></li>
+                            <li><a href="event.html">Event</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Agreegments</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bienvenidos a Costa Rica</h1>
+            <h2>Costa Rica, una joya escondida en el corazón de América Central, es un país que combina maravillosamente la belleza natural con la hospitalidad cálida y auténtica de su gente. 
+                Conocido por su biodiversidad exuberante, playas de ensueño y política ambiental progresista, Costa Rica es el destino ideal para eventos internacionales que buscan un 
+                toque de magia tropical</h2>
+                <section class="content-section">
+                    <button onclick="showContent('Maravillas')">Maravillas Naturales</button>
+                    <button onclick="showContent('Infraestructura')">Infraestructura y Conectividad</button>
+                    <button onclick="showContent('Sostenibilidad')">Sostenibilidad y Ecoturismo</button>
+                    <button onclick="showContent('Actividades')">Actividades para Todos los Gustos</button>
+                    <button onclick="showContent('Cultura')">Cultura y Tradición</button>
+                    <button onclick="showContent('Seguridad')">Seguridad y Hospitalidad</button>
+                    <div id="content"></div>
+                </section>
+            <h3>Costa Rica es un destino de ensueño que ofrece el equilibrio perfecto entre aventura, relajación, cultura y sostenibilidad. Ya sea que estés planenado una conferencia internacional, un retiro corporativo o una celebración especial, este paraíso tropical tiene todo lo que necesitas para hacer de tu evento una experiencia inolvidable. ¡Ven y descubre por qué Costa Rica es el lugar ideal para tu próximo gran evento!</h3>
+            
+        </div>
+    </section>
+</body>
+</html>
