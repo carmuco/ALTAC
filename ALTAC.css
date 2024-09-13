@@ -4,23 +4,24 @@
     box-sizing: border-box;
 }
 
-@font-face{
+@font-face {
     font-family: 'Futura';
-    src: url('caligrafias/FuturaStd-Book.otf') format('truetype');/* Ajusta la ruta si es necesario */ 
+    src: url('caligrafias/FuturaStd-Book.otf') format('truetype');
 }
 
 body {
     font-family: 'Futura';
-    font-weight: bold; /* Aplicar negrita a todo el texto */
+    font-weight: bold;
 }
 
 header {
-    background-color: rgba(93, 56, 153, 0.9); /* Color de fondo con transparencia */
+    background-color: rgba(93, 56, 153, 0.9);
     padding: 10px 0;
     color: #fff;
     position: fixed;
     width: 100%;
     z-index: 1000;
+    top: 0;
 }
 
 .container {
@@ -32,7 +33,7 @@ header {
 }
 
 .logo img {
-    height: 50px; /* Ajusta la altura de la imagen según tus necesidades */
+    height: 50px;
 }
 
 nav ul {
@@ -49,7 +50,7 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
-    font-size: 18px; /* Opcionalmente aumenta el tamaño de fuente */
+    font-size: 18px;
     font-family: 'Futura';
 }
 
@@ -58,12 +59,15 @@ nav ul li .dropdown {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: rgba(75, 35, 139, 0.9); /* Color de fondo con transparencia */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    background-color: rgba(75, 35, 139, 0.9);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
     visibility: hidden;
+    min-width: 240px; /* Ajusta el ancho del dropdown */
+    padding: 15px 0; /* Espacio interno para dar grosor */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
 nav ul li .dropdown li {
@@ -71,9 +75,11 @@ nav ul li .dropdown li {
 }
 
 nav ul li .dropdown li a {
-    padding: 10px 20px;
+    padding: 15px 25px; /* Aumenta el padding para hacerlo más grueso */
     display: block;
     white-space: nowrap;
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    color: #fff; /* Asegura que el texto sea visible */
 }
 
 nav ul li:hover .dropdown {
@@ -82,100 +88,141 @@ nav ul li:hover .dropdown {
     visibility: visible;
 }
 
-.content-section {
-    margin: 30px;
-    text-align: center; /* Centra los botones horizontalmente */
-}
-
-.content-section button {
-    margin: 10px;
-    padding: 50px 90px;
-    font-size:40px;
-    cursor: pointer;
-    border: none;
-    border-radius: 40px;
-    background-color: #4B0082; /* Cambia este color al que prefieras */
-    color: white;
-    font-family:'Futura';
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.content-section button:hover {
-    background-color: #5e5e5e; /* Un color más oscuro para el efecto hover */
-}
-
-.content-section #content {
-    margin-top: 50px;
-    font-size: 20px;
-    color: black; /* Cambia este color al que prefieras */
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    opacity: 0; /* Inicia con transparencia */
-    animation: fadeIn 1s forwards; /* Aplica la animación de desvanecimiento */
-}
-.content-section #content p {
-    max-width: 600px; /* Limita el ancho del párrafo para una mejor legibilidad */
-    background-color: rgba(92, 92, 92, 0.7); /* Fondo morado transparente */
-    color: white; /* Color del texto */
-    padding: 20px; /* Espacio alrededor del texto */
-    border-radius: 10px; /* Bordes redondeados */
-    opacity: 0; /* Inicialmente invisible */
-    animation: fadeIn 1s forwards; /* Aplica la animación de desvanecimiento */
-}
-
 .hero {
-    background-image: url('');
+    background-image: url('Imagenes/AltacFondo.png');
     background-size: cover;
     background-position: center;
-    height: 100vh; /* Altura completa */
-    width: 100vw;  /* Ancho completo */
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #fff;
     text-align: center;
+    padding-top: 80px;
 }
 
-
-.hero {
-    background-image: url('Imagenes/AltacFondo.png'); /* Puedes añadir una imagen de fondo si lo deseas */
-    background-size: cover;
-    background-position: center;
-    height: 100; /* Altura completa */
-    width: 100;  /* Ancho completo */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
+.hero h2 {
+    font-family: 'Futura';
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000;
+    animation: fadeInUp 2s ease-in-out;
 }
 
 .hero p {
     font-size: 24px;
     font-family: 'Futura';
-    animation: fadeInUp 2.5s ease-in-out;
-    background-color: #5D3899; /* Fondo morado transparente */
-    padding: 20px; /* Espacio alrededor del texto */
-    border-radius: 10px; /* Bordes redondeados */
-    color: white; /* Color del texto */
-    margin: 10px 0; /* Espacio alrededor del párrafo */
-    max-width: 80%; /* Limita el ancho del párrafo */
-    text-align: center; /* Alinea el texto al centro */
+    background-color: #5D3899;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    margin: 10px 0;
+    max-width: 80%;
+    text-align: center;
 }
 
-.hero h2 {
-    font-family:'Futura';
+.content-section {
+    margin: 30px;
+    text-align: center;
+}
+
+.content-section button {
+    margin: 10px;
+    padding: 50px 90px;
     font-size: 40px;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000; /* Borde morado */
-    animation: fadeInUp 2s ease-in-out;
+    cursor: pointer;
+    border: none;
+    border-radius: 40px;
+    background-color: #4B0082;
+    color: white;
+    font-family: 'Futura';
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
+.content-section button:hover {
+    background-color: #5e5e5e;
+}
 
+.content-section #content {
+    margin-top: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.content-section #content p {
+    max-width: 600px;
+    background-color: rgba(92, 92, 92, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Botón de navegación oculto en pantallas grandes */
+.nav-toggle {
+    display: none;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(93, 56, 153, 0.9);
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+
+    nav.active ul {
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        font-size: 24px;
+        padding: 15px;
+        display: block;
+        text-align: left;
+    }
+
+    /* Mostrar el botón de navegación en pantallas pequeñas */
+    .nav-toggle {
+        display: block;
+        font-size: 24px;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+}
+
+/* Animación de fadeIn */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
